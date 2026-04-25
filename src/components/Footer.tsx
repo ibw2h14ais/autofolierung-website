@@ -71,8 +71,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-surface-light pt-8 text-center text-xs text-muted">
-          © {new Date().getFullYear()} AutoFolierung. Alle Rechte vorbehalten.
+        <div className="mt-12 border-t border-surface-light pt-8 text-center text-xs text-muted" suppressHydrationWarning>
+          © 2026 AutoFolierung. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

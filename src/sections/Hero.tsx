@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import useMounted from "@/hooks/useMounted";
 
 export default function Hero() {
+  const mounted = useMounted();
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center px-6 pt-16 text-center">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-surface)_0%,_#0a0a0a_70%)]" />
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={false}
+        animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 flex max-w-4xl flex-col items-center gap-8"
       >

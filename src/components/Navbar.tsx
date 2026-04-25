@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import useMounted from "@/hooks/useMounted";
 
 const navLinks = [
   { href: "#services", label: "Leistungen" },
@@ -52,7 +53,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {open && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
